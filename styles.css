@@ -1,0 +1,111 @@
+body {
+  background-color: #ccc4b4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  animation-name: colorSwap;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  color: #FF6961;
+
+}
+h2{
+    text-align: center;
+    
+}
+
+.container { 
+  height: 3000px;
+  position: relative;
+  background-color: #D3D3D3;
+  /*background-image: url('https://s3-us-west-2.amazonaws.com/jaykay/hwarangorg/chapter/cover_vB8vLHTEkb.png'), url('https://i.imgur.com/jlz4j3R.png');*/
+  background-size: contain;
+  
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*this is a button class and i changed it for individual buttons (all buttons have the things in the button class)*/
+  .buttonMain{
+  font-size: 12px;
+  color: #4D5259;
+  width: 150px;
+  height: 100px;
+  line-height: 1.5;
+  font-weight: bold;
+  padding: .5em 2em;
+  background: #D3D3D3;
+  border: 2px solid #4D5259;
+  box-shadow: 10px 10px 0 0 #4D5259;
+  border-radius: 100px;
+  outline:0;
+  transition: ease all .18s;
+} 
+/*made it so the buttons look realistic (i.e. when you press the button it depresses)* did this by making the box shadow 10px 10px and button:active translates the Y and X axis by 10px respectively*/
+.buttonMain:active {
+  transform: translateY(10px) translateX(10px);
+  box-shadow: 0px 0px 0 0 #4D5259;
+}
+.buttonMain:hover {
+  animation-name: colorSwap2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.buttonKwon{
+  font-size: 16px;
+  color: #4D5259;
+  width: 400px;
+  height: 400px;
+  line-height: 1.5;
+  font-weight: bold;
+  background: #D3D3D3;
+  border: 2px solid #4D5259;
+  border-radius: 100px;
+  outline:0;
+}
+.buttonKwon:active {
+  transform: translateY(10px) translateX(10px);
+  box-shadow: 0px 0px 0 0 #4D5259;
+}
+.buttonKwon:hover {
+  animation-name: colorSwap2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+.container { 
+  height: 400px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+
+@keyframes colorSwap {
+  0%   {color: #FF6961;}
+  25%  {color: #FDFD96;}
+  50%  {color: #AEC6CF;}
+  100% {color: #C1E1C1;}
+}
+@keyframes colorSwap2 {
+  0%   {background-color: #FF6961;}
+  25%  {background-color: #FDFD96;}
+  50%  {background-color: #AEC6CF;}
+  100% {background-color: #C1E1C1;}
+}
